@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Ninja Gold</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <style>
+        form {
+          display: inline-block;
+          text-align: center;
+          outline-style:solid;
+          outline-color:black;
+          background-color: aqua;
+        }
+    </style>
+   </head>
+   <body>
+     <p>Gold:</p>
+     <p>{{ counter }}</p>
+     <div>
+      <form action="/process_money" method="post">
+        <p>Farm</p>
+        <p>(earns 10-20 golds)</p>
+        <input type="hidden" name="which_form" value="farm" />
+        <input type="submit" value="Find Gold!"/>
+      </form>
+      <form action="/process_money" method="post">
+        <p>Cave</p>
+        <p>(earns 5-10 golds)</p>
+        <input type="hidden" name="which_form" value="cave" />
+        <input type="submit" value="Find Gold!"/>
+      </form>
+      <form action="/process_money" method="post">
+        <p>House</p>
+        <p>(earns 2-5 golds)</p>
+        <input type="hidden" name="which_form" value="house" />
+        <input type="submit" value="Find Gold!"/>
+      </form>
+      <form action="/process_money" method="post">
+        <p>Casino</p>
+        <p>(earns/takes 0-50 golds)</p>
+        <input type="hidden" name="which_form" value="casino" />
+        <input type="submit" value="Find Gold!"/>
+      </form>
+    </div>
+    <p>Activities</p>
+    <p>{{ status_form }}</p>
+   </body>
+</html>
